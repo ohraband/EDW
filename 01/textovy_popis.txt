@@ -1,0 +1,127 @@
+cisla v nazvoch su datum kedy bola tabulka aktualna
+
+Airlines(airlines_20190227.dat) - tabulka aeroliniek, \N je "NULL"
+1.airline_id - identifikacne cislo leteckej spolocnosti, unikatny integer vsetko kladne cisla okrem -1 na uknonwn, sluzi iba na internu organizaciu suboru
+2.name - nazov aerolinky, string
+3.alias - alternativny nazov aerolinky, string
+4.iata - dvojpismenovy iata kod aerolinky, string
+5.icao - trojpismenovy icao kod aerolinky, string
+6.callsign - "call sign" aerolinky, string
+7.country - anglicky nazov domovskej krajiny aerolinky, string
+8.active - oznacenie ci aerolinka bola donedavna aktivna, string, Y ano a N nie
+
+Airport-frequencies(airport-frequencies_20190227.csv) - tabulka radiovych frekvencii v leteckej doprave
+1.id - identifikacne cislo radio frekvencie, unikatny integer vsetko kladne cisla, sluzi iba na internu organizaciu suboru
+2.airport_ref - identifikacne cislo letiska zhoduje sa s id v airports, integer kladne cislo
+3.airport_ident - identifikacny nazov letiska zhoduje sa s icao_code v airports, string, je pouzita skutocna skratka pre dane letisko
+4.type - skratka pre typ radio frekvencie, string, su pouzite zauzivane skratky pre rozne typy vysielacov
+5.description - dalsi popis konkretnej frekvencie, string
+6.frequency_mhz - hodnota frekvencie v megherzoch, double
+
+Airports(airports_20190227.dat) - tabulka letisk
+1.id - identifikacne cislo letiska, unikatny integer vsetko kladne cisla, sluzi iba na internu organizaciu suboru
+2.name - oficilany nazov letiska, string
+3.municipality - hlavna oblast ktoru letisko obsluhuje, string, letisko sa nemusi v danej oblasti nachadzat
+4.country_name - nazov krajiny v ktorej sa letisko nachadza, string
+5.iata_code - iata kod letiska, string, 3 pismena
+6.icao_code - icao kod letiska, string, 4 pismena
+7.latitude_deg - hodnota zemepisnej sirky letiska v stupnoch, double, kladne cisla sever a zaporne juh
+8.longitude_deg - hodnota zemepisnej dlzky letiska v stupnoch, double, kladne cisla vychod a zaporne zapad
+9.elevation_ft - nadmorska vyska letiska v stopach (ft), integer
+10.gmt_time_dif - rozdiel casoveho pasma letiska od gmt, double
+11.????
+12.atc region??
+13.airport - slovo airport, string
+14.OurAirports - slovo OurAirports, string, umelo pridany stlpec s nazvom zdrojovej stranky 
+
+
+Countries(countries_20190227.csv) - tabulka krajin
+1.id - identifikacne cislo krajiny/uzemneho celku, unikatny integer vsetko kladne cisla, sluzi iba na internu organizaciu suboru
+2.code - dvojpismenova skratka nazvu krajiny, string, ISO 3166-1 alpha-2, pripadne neoficialne skratka ak ISO neexisutje
+3.name - nazov krajiny v anglictine, string
+4.continent - dvojpismenova skratka kontinentu (kontinentu podla americkej definicie) kde sa krajina nachadza, string
+5.wikipedia_link - odkaz na wikipediu krajiny, string
+6.keywords - alternativne nazvy a ine pomocne slova na vyhladanie krajiny, string
+
+Navaids (navaids_20190227.csv) - tabulka "navigational aid (NAVAID)" miest pomahajucich s navigaciou lietadiel
+1.id - identifikacne cislo pre navaid, unikatny integer vsetko kladne cisla, sluzi iba na internu organizaciu suboru
+2.filename - unikatny idetifikator, string, format navaid-krajina
+3.ident - identifikator ktory navaid vysiela, string
+4.name - nazov navaidu bez typu, string
+5.type - typ navaidu, string
+6.frequency_khz - operacna frekvencie navaidu v khz, integer
+7.latitude_deg - hodnota zemepisnej sirky navaidu v stupnoch, double, kladne cisla sever a zaporne juh
+8.longitude_deg - hodnota zemepisnej dlzky navaidu v stupnoch, double, kladne cisla vychod a zaporne zapad
+9.elevation_ft - nadmorska vyska navaidu v stopach (ft), integer
+10.iso_country - dvojpismenova skratka nazvu krajiny, string, ISO 3166-1 alpha-2, pripadne neoficialne skratka ak ISO neexisutje
+11.dme_frequency_khz - frekvencia pre DME (Distance Measuring Equipment) v khz, string
+12.dme_channel - kanal DME ktory sa pouziva pre meranie vzdialenosti, string
+13.dme_latitude_deg - zemepisna sirka asociovaneho DME v desatinnych stupnoch, double
+14.dme_longitude_deg - zemepisna dlzka asociovaneho DME v desatinnych stupnoch, double
+15.dme_elevation_ft - nadmorska vyska DME v stopach, integer
+16.slaved_variation_deg - magneticka odchylka nastavena v navaide, double, pozitivna znamena vychod, zaporna zapad
+17.magnetic_variation_deg - skutocna magneticka odchylka v stupnoch v mieste navaidu, double
+18.usageType - typ vyuzitia navaidu v leteckom priestore, string
+19.power - uroven vykonu navaidu, string
+20.associated_airport - identifikator letiska ktore je spojene s tymto navaidom, string, prepojene s icao_code v airports tabulke
+
+Planes1(planes_20180123.dat) - tabulka liteadiel, \N je "NULL"
+1.name - cele meno lietadla, string
+2.iata_code - trojpismenovy iata kod lietadla, string
+3.icao_code - stvorpismenovy icao kod lietadla, string
+
+Planes2(planes_20180529.dat) - tabulka liteadiel, \N je "NULL"
+1.name - cele meno lietadla, string
+2.iata_code - trojpismenovy iata kod lietadla, string
+3.icao_code - stvorpismenovy icao kod lietadla, string
+
+Planes3(planes_20190227.dat) - tabulka liteadiel, \N je "NULL"
+1.name - cele meno lietadla, string
+2.iata_code - trojpismenovy iata kod lietadla, string
+3.icao_code - stvorpismenovy icao kod lietadla, string
+
+
+Regions(regions_20190227.csv) - tabulka subdivizii krajin
+1.id - identifikacne cislo subdivizie krajiny, unikatny integer vsetko kladne cisla, sluzi iba na internu organizaciu suboru
+2.code - kod krajiny skombinovany s kodom subdivizie, string format krajina-subdivizia
+3.local_code - kod subdivizie, string, podla ISO 3166 ak je to mozne, U-A region je pre miesta(z inych tabuliek) u ktorych nie je priradeny region
+4.name - anglicky nazov subdivizie krajiny, string
+5.continent - dvojpismenova skratka kontinentu (kontinentu podla americkej definicie) kde sa krajina nachadza, string
+6.iso_country - dvojpismenova skratka nazvu krajiny, string, ISO 3166-1 alpha-2, pripadne neoficialne skratka ak ISO neexisutje
+7.wikipedia_link - odkaz na wikipediu subdivizie krajiny, string
+8.keywords - alternativne nazvy a ine pomocne slova na vyhladanie subdivizie, string
+
+Routes(routes_20190227.dat) - tabulka letov
+1.airline - dvojpismenova skratka aerolinky, string
+2.airline_id - identifikacne cislo aerolinky, integer
+3.source_airport - trojpismenova iata skratka odletoveho letiska, string
+4.source_airport_id -  identifikacne cislo odletoveho letiska, integer
+5.destination_airport - trojpismenova iata skratka priletoveho letiska, string
+6.destination_airport_id  - identifikacne cislo priletoveho letiska, integer
+7.codeshare - bud Y alebo null ,string, let zdielany medzi viacerymi aerolinkami
+8.stops - pocet zastavok, integer
+9.equipment - typ lietadla, string
+
+Runways(runways_20190227.csv) - tabulka runways (pristavacich drah)
+1.id - identifikacne cislo runwaye, unikatny integer vsetko kladne cisla, sluzi iba na internu organizaciu suboru
+2.airport_ref -  identifikacne cislo letiska zhoduje sa s id v airports, integer kladne cislo
+3.airport_ident - identifikacny nazov letiska zhoduje sa s icao_code v airports, string, je pouzita skutocna skratka pre dane letisko
+4.length_ft - dlzka celej drahy v stopach, integer
+5.width_ft - sirka drahy v stopach, integer
+6.surface - kod typu povrchu drahy, string
+7.lighted - 1 ak je povrch osvetleny v noci a  0 ak nie je, integer
+8.closed - 1 ak je draha momentalne uzavreta a 0 ak nie je, integer
+9.le_ident - identifikator pre koniec drahy s nizsim cislom, string
+10.le_latitude_deg - zemepisna sirka stredu konca drahy s nizsim cislom, double, kladne cisla sever a zaporne juh
+11.le_longitude_deg - zemepisna dlzka stredu konca drahy s nizsim cislom, double, kladne cisla vychod a zaporne zapad
+12.le_elevation_ft - nadmorska vyska konca drahy s nizsim cislom v stopach, integer
+13.le_heading_degT - uhol konca drahy s nizsim cislom v stupnoch relativne ku zemepisnemu severnemu polu, double 
+14.le_displaced_threshold_ft - dlzka posunuteho prahu (ak existuje) pre koniec drahy s nizsim cislom v stopach, integer
+15.he_ident - identifikator pre koniec drahy s vyssim cislom, string
+16.he_latitude_deg - zemepisna sirka stredu konca drahy s vyssim cislom, double, kladne cisla sever a zaporne juh
+17.he_longitude_deg - zemepisna dlzka stredu konca drahy s vyssim cislom, double, kladne cisla vychod a zaporne zapad
+18.he_elevation_ft - nadmorska vyska konca drahy s vyssim cislom v stopach, integer
+19.he_heading_degT - uhol konca drahy s vyssim cislom v stupnoch relativne ku zemepisnemu severnemu polu, double 
+20.he_displaced_threshold_ft - dlzka posunuteho prahu (ak existuje) pre koniec drahy s vyssim cislom v stopach, integer
+
+

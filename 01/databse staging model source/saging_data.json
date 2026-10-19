@@ -1,0 +1,718 @@
+{
+  "entities": [
+    {
+      "name": "Airlines",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airline_code_iata",
+          "primary": false,
+          "unique": true,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "airline_code_icao",
+          "primary": false,
+          "unique": true,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "callsign",
+          "primary": false,
+          "unique": true,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "active",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "alias",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "country_of_origin",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Airport_freq",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airport_ident",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airport_ref",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "freq_mhz",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "type",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "desc",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "varchar(256)"
+        }
+      ]
+    },
+    {
+      "name": "Airports",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "column13",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "column14",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "country",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "elevation_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "gmt_time_dif",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "iata_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "icao_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "latitude",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "longtitude",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "municipality",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "timezone___",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "uenaso___",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Countries",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "code",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "continent",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "wiki_link",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "keywords",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Nav_aids",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "filename",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "freq_khz",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "ident",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "iso_country",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "lat_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "lon_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "magnetic_var_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "power",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "type",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "usage_type",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "associated_airport",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "dme_elev_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "dme_freq_khz",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "dme_channel",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "dme_lat_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "dme_long_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "elev_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "slaved_var_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        }
+      ]
+    },
+    {
+      "name": "Planes",
+      "parent": null,
+      "attr": [
+        {
+          "name": "icao_code",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": "varchar(256)"
+        },
+        {
+          "name": "iata_code",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": "varchar(256)"
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Regions",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "code",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "continent",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "iso_country",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "local_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "keywords",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "wiki_links",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Routes",
+      "parent": null,
+      "attr": [
+        {
+          "name": "airine_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airline_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "codeshare",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "dest_airport",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "dest_airport_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "no_stops",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "plane",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "source_airport",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "source_airport_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        }
+      ]
+    },
+    {
+      "name": "Runways",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airport_ident_icao",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airport_ref",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "closed",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "le_ident",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "length_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "lighted",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "surface",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "width_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "he_displaced_treshold_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "he_elevation_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "he_heading_degt",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "he_ident",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "he_latitude_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "he_longtitude_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "le_displaced_treshold_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "le_elevation_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "le_heading_degt",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "le_latitude_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "le_longtitude_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        }
+      ]
+    }
+  ],
+  "relations": [],
+  "notes": []
+}

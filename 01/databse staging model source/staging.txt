@@ -1,0 +1,149 @@
+-- Remove conflicting tables
+DROP TABLE IF EXISTS airlines CASCADE;
+DROP TABLE IF EXISTS airport_freq CASCADE;
+DROP TABLE IF EXISTS airports CASCADE;
+DROP TABLE IF EXISTS countries CASCADE;
+DROP TABLE IF EXISTS nav_aids CASCADE;
+DROP TABLE IF EXISTS planes CASCADE;
+DROP TABLE IF EXISTS regions CASCADE;
+DROP TABLE IF EXISTS routes CASCADE;
+DROP TABLE IF EXISTS runways CASCADE;
+-- End of removing
+
+CREATE TABLE airlines (
+    id SERIAL NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    alias VARCHAR(256) NOT NULL,
+    country_of_origin VARCHAR(256),
+    active BOOLEAN NOT NULL,
+    callsign VARCHAR(256),
+    airline_code_iata VARCHAR(256),
+    airline_code_icao VARCHAR(256)
+);
+ALTER TABLE airlines ADD CONSTRAINT pk_airlines PRIMARY KEY (id);
+ALTER TABLE airlines ADD CONSTRAINT uc_airlines_callsign UNIQUE (callsign);
+ALTER TABLE airlines ADD CONSTRAINT uc_airlines_airline_code_iata UNIQUE (airline_code_iata);
+ALTER TABLE airlines ADD CONSTRAINT uc_airlines_airline_code_icao UNIQUE (airline_code_icao);
+
+CREATE TABLE airport_freq (
+    id SERIAL NOT NULL,
+    airport_ref INTEGER NOT NULL,
+    airport_ident VARCHAR(256) NOT NULL,
+    type VARCHAR(256) NOT NULL,
+    desc VARCHAR(256),
+    freq_mhz DOUBLE PRECISION NOT NULL
+);
+ALTER TABLE airport_freq ADD CONSTRAINT pk_airport_freq PRIMARY KEY (id);
+
+CREATE TABLE airports (
+    id SERIAL NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    municipality VARCHAR(256) NOT NULL,
+    country VARCHAR(256) NOT NULL,
+    iata_code VARCHAR(256) NOT NULL,
+    icao_code VARCHAR(256) NOT NULL,
+    latitude DOUBLE PRECISION NOT NULL,
+    longtitude DOUBLE PRECISION NOT NULL,
+    elevation_ft INTEGER NOT NULL,
+    gmt_time_dif DOUBLE PRECISION NOT NULL,
+    timezone___ VARCHAR(256) NOT NULL,
+    uenaso___ VARCHAR(256) NOT NULL,
+    column13 VARCHAR(256) NOT NULL,
+    column14 VARCHAR(256) NOT NULL
+);
+ALTER TABLE airports ADD CONSTRAINT pk_airports PRIMARY KEY (id);
+
+CREATE TABLE countries (
+    id SERIAL NOT NULL,
+    code VARCHAR(256) NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    continent VARCHAR(256) NOT NULL,
+    wiki_link VARCHAR(256) NOT NULL,
+    keywords VARCHAR(256)
+);
+ALTER TABLE countries ADD CONSTRAINT pk_countries PRIMARY KEY (id);
+ALTER TABLE countries ADD CONSTRAINT uc_countries_code UNIQUE (code);
+
+CREATE TABLE nav_aids (
+    id SERIAL NOT NULL,
+    filename VARCHAR(256) NOT NULL,
+    ident VARCHAR(256) NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    type VARCHAR(256) NOT NULL,
+    freq_khz INTEGER NOT NULL,
+    lat_deg DOUBLE PRECISION NOT NULL,
+    lon_deg DOUBLE PRECISION NOT NULL,
+    elev_ft INTEGER,
+    iso_country VARCHAR(256) NOT NULL,
+    dme_freq_khz INTEGER,
+    dme_channel VARCHAR(256),
+    dme_lat_deg DOUBLE PRECISION,
+    dme_long_deg DOUBLE PRECISION,
+    dme_elev_ft INTEGER,
+    slaved_var_deg DOUBLE PRECISION,
+    magnetic_var_deg DOUBLE PRECISION NOT NULL,
+    usage_type VARCHAR(256) NOT NULL,
+    power VARCHAR(256) NOT NULL,
+    associated_airport VARCHAR(256)
+);
+ALTER TABLE nav_aids ADD CONSTRAINT pk_nav_aids PRIMARY KEY (id);
+ALTER TABLE nav_aids ADD CONSTRAINT uc_nav_aids_filename UNIQUE (filename);
+
+CREATE TABLE planes (
+    icao_code VARCHAR(256) NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    iata_code VARCHAR(256) NOT NULL
+);
+ALTER TABLE planes ADD CONSTRAINT pk_planes PRIMARY KEY (icao_code);
+ALTER TABLE planes ADD CONSTRAINT uc_planes_name UNIQUE (name);
+ALTER TABLE planes ADD CONSTRAINT uc_planes_iata_code UNIQUE (iata_code);
+
+CREATE TABLE regions (
+    id SERIAL NOT NULL,
+    code VARCHAR(256) NOT NULL,
+    local_code VARCHAR(256) NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    continent VARCHAR(256) NOT NULL,
+    iso_country VARCHAR(256) NOT NULL,
+    wiki_links VARCHAR(256),
+    keywords VARCHAR(256)
+);
+ALTER TABLE regions ADD CONSTRAINT pk_regions PRIMARY KEY (id);
+ALTER TABLE regions ADD CONSTRAINT uc_regions_code UNIQUE (code);
+
+-- Warning: Missing primary key. It is recommended to explicitly define a primary key.
+CREATE TABLE routes (
+    airine_code VARCHAR(256) NOT NULL,
+    airline_id INTEGER NOT NULL,
+    source_airport VARCHAR(256) NOT NULL,
+    source_airport_id INTEGER NOT NULL,
+    dest_airport VARCHAR(256) NOT NULL,
+    dest_airport_id INTEGER NOT NULL,
+    codeshare VARCHAR(256) NOT NULL,
+    no_stops INTEGER NOT NULL,
+    plane VARCHAR(256) NOT NULL
+);
+
+CREATE TABLE runways (
+    id SERIAL NOT NULL,
+    airport_ref INTEGER NOT NULL,
+    airport_ident_icao VARCHAR(256) NOT NULL,
+    length_ft INTEGER NOT NULL,
+    width_ft INTEGER NOT NULL,
+    surface VARCHAR(256) NOT NULL,
+    lighted INTEGER NOT NULL,
+    closed INTEGER NOT NULL,
+    le_ident VARCHAR(256) NOT NULL,
+    le_latitude_deg DOUBLE PRECISION,
+    le_longtitude_deg DOUBLE PRECISION,
+    le_elevation_ft INTEGER,
+    le_heading_degt DOUBLE PRECISION,
+    le_displaced_treshold_ft INTEGER,
+    he_ident VARCHAR(256),
+    he_latitude_deg DOUBLE PRECISION,
+    he_longtitude_deg DOUBLE PRECISION,
+    he_elevation_ft INTEGER,
+    he_heading_degt DOUBLE PRECISION,
+    he_displaced_treshold_ft INTEGER
+);
+ALTER TABLE runways ADD CONSTRAINT pk_runways PRIMARY KEY (id);

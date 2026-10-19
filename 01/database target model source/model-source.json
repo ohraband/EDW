@@ -1,0 +1,1173 @@
+{
+  "entities": [
+    {
+      "name": "Airlines",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "alias",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "country_of_origin",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "active",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "callsign",
+          "primary": false,
+          "unique": true,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "airline_code_iata",
+          "primary": false,
+          "unique": true,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "airline_code_icao",
+          "primary": false,
+          "unique": true,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 534.4570032477545,
+        "y": 535.6471145173298,
+        "width": 236.375,
+        "height": 163.1875
+      }
+    },
+    {
+      "name": "Airport_freq",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airport_ref",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "airport_ident",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "type",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "desc",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "varchar(256)"
+        },
+        {
+          "name": "freq_mhz",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        }
+      ],
+      "transform": {
+        "x": 587.1428571428571,
+        "y": 942.6427502313448,
+        "width": 236.953125,
+        "height": 163.93124389648438
+      }
+    },
+    {
+      "name": "Airports",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "municipality",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "country",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "iata_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "icao_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "latitude",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "longtitude",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "elevation_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "gmt_time_dif",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "timezone___",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "uenaso___",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 260.2165787509987,
+        "y": 825.9410255379255,
+        "width": 218.71875,
+        "height": 247.25
+      }
+    },
+    {
+      "name": "Countries",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "code",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "continent",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "wiki_link",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "keywords",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 573.7981255465476,
+        "y": 743.8014988570321,
+        "width": 208.78125,
+        "height": 129.5625
+      }
+    },
+    {
+      "name": "Nav_aids",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "filename",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "ident",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "type",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "freq_khz",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "lat_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "lon_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "elev_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "iso_country",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "dme_freq_khz",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "dme_channel",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "dme_lat_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "dme_long_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "dme_elev_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "slaved_var_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "magnetic_var_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "usage_type",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "power",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "associated_airport",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 193.13122535602065,
+        "y": 1128.6872384630014,
+        "width": 248.03125,
+        "height": 469.91876220703125
+      }
+    },
+    {
+      "name": "Planes",
+      "parent": null,
+      "attr": [
+        {
+          "name": "name",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "iata_code",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": "varchar(256)"
+        },
+        {
+          "name": "icao_code",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": "varchar(256)"
+        }
+      ],
+      "transform": {
+        "x": -79.30500039663966,
+        "y": 590.2383724594523,
+        "width": 193.328125,
+        "height": 79.125
+      }
+    },
+    {
+      "name": "Regions",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "code",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "local_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "continent",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "iso_country",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "wiki_links",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "keywords",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 847.3058898905335,
+        "y": 727.0520771613444,
+        "width": 209.828125,
+        "height": 163.1875
+      }
+    },
+    {
+      "name": "Routes",
+      "parent": null,
+      "attr": [
+        {
+          "name": "airine_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airline_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "source_airport",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "source_airport_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "dest_airport",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "dest_airport_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "codeshare",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "no_stops",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "plane",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 237.470745258279,
+        "y": 556.7136607942406,
+        "width": 233.234375,
+        "height": 180
+      }
+    },
+    {
+      "name": "Runways",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airport_ref",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "airport_ident_icao",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "length_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "width_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "surface",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "lighted",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "closed",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "le_ident",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "le_latitude_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "le_longtitude_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "le_elevation_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "le_heading_degt",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "le_displaced_treshold_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "he_ident",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "he_latitude_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "he_longtitude_deg",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "he_elevation_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        },
+        {
+          "name": "he_heading_degt",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "double"
+        },
+        {
+          "name": "he_displaced_treshold_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": "integer"
+        }
+      ],
+      "transform": {
+        "x": -147.5341212833924,
+        "y": 758.9495245282087,
+        "width": 281.9375,
+        "height": 364.9375
+      }
+    }
+  ],
+  "relations": [
+    [
+      {
+        "entity": "Airports",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 478.9353287509987,
+            "y": 949.5660255379255,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 533.0390929469279,
+              "y": 978.4950128846347
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Airport_freq",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 587.1428571428571,
+            "y": 1007.4240002313439,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 533.0390929469279,
+              "y": 978.4950128846347
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Countries",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 573.7981255465476,
+            "y": 835.9733738570321,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 526.3667271487732,
+              "y": 864.3634496974788
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Airports",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 478.9353287509987,
+            "y": 892.7535255379255,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 526.3667271487732,
+              "y": 864.3634496974788
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Countries",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 630.9934380465476,
+            "y": 743.8014988570321,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 641.818970647151,
+              "y": 721.3180566871811
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Airlines",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 652.6445032477545,
+            "y": 698.8346145173299,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 641.818970647151,
+              "y": 721.3180566871811
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Nav_aids",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 317.14685035602065,
+            "y": 1128.6872384630014,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 343.36140205350966,
+              "y": 1100.9391320004634
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Airports",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 369.5759537509987,
+            "y": 1073.1910255379255,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 343.36140205350966,
+              "y": 1100.9391320004634
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Regions",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 847.3058898905335,
+            "y": 808.6458271613444,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 814.9426327185406,
+              "y": 808.6142880091883
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Countries",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 782.5793755465476,
+            "y": 808.5827488570321,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 814.9426327185406,
+              "y": 808.6142880091883
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Routes",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 237.470745258279,
+            "y": 646.7136607942406,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 175.7469349308197,
+              "y": 638.2572666268463
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Planes",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 114.02312460336037,
+            "y": 629.8008724594521,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 175.7469349308197,
+              "y": 638.2572666268463
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Routes",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 354.087932758279,
+            "y": 736.7136607942409,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 368.0419041921389,
+              "y": 781.3273431660832
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Airports",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 381.9958756259987,
+            "y": 825.9410255379255,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 368.0419041921389,
+              "y": 781.3273431660832
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Routes",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 470.705120258279,
+            "y": 646.7136607942406,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 502.5810617530168,
+              "y": 631.9772626557851
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Airlines",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 534.4570032477545,
+            "y": 617.2408645173298,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 502.5810617530168,
+              "y": 631.9772626557851
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Runways",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 134.4033787166076,
+            "y": 941.4182745282087,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 197.30997873380312,
+              "y": 988.1015250330671
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Airports",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 260.2165787509987,
+            "y": 1034.7847755379255,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 197.30997873380312,
+              "y": 988.1015250330671
+            }
+          ],
+          "manual": false
+        }
+      }
+    ]
+  ],
+  "notes": []
+}

@@ -1,0 +1,474 @@
+{
+  "entities": [
+    {
+      "name": "European_countries_by_area",
+      "parent": null,
+      "attr": [
+        {
+          "name": "country_or_dependency",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "europe_area_km2",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "europe_area_mi2",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "total",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Target_airlines",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "active",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "boolean"
+        },
+        {
+          "name": "airline_code_iata",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airline_code_icao",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "alias",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "callsign",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "country_of_origin",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Target_airports",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": "serial"
+        },
+        {
+          "name": "airport_route_count",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "varchar(256)"
+        },
+        {
+          "name": "country",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "elevation_ft",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "int"
+        },
+        {
+          "name": "gmt_time_dif",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "int"
+        },
+        {
+          "name": "iata_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "icao_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "latitude",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "longtitude",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "municipality",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "timezone___",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "uenaso___",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Target_countries",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airport_density",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "area",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "continent",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "keywords",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "route_density",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "wikipedia_link",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Target_routes",
+      "parent": null,
+      "attr": [
+        {
+          "name": "tech_key",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airine_code",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "airline_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "codeshare",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "dest_airport",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "dest_airport_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "dest_lat",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "dest_long",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "dest_name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "no_stops",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "plane",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "route_length",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "source_airport",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "source_airport_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "integer"
+        },
+        {
+          "name": "src_lat",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "src_long",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "double"
+        },
+        {
+          "name": "src_name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    }
+  ],
+  "relations": [
+    [
+      {
+        "entity": "European_countries_by_area",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      },
+      {
+        "entity": "Target_countries",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Target_airlines",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null
+      },
+      {
+        "entity": "Target_countries",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Target_airports",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null
+      },
+      {
+        "entity": "Target_countries",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Target_airports",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      },
+      {
+        "entity": "Target_routes",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Target_airports",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      },
+      {
+        "entity": "Target_routes",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null
+      }
+    ]
+  ],
+  "notes": []
+}
